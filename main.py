@@ -10,7 +10,7 @@ url = "https://api.ultramsg.com/instance14131/messages/chat"
 async def root():
     return "ok"
 
-@app.post("/otp")
+@app.get("/otp")
 async def get_body():
     payload = f"token=j6zub8czi2qjp57p&to=+917720063009,&body=otp&priority=10&referenceId="
     headers = {'content-type': 'application/x-www-form-urlencoded'}
