@@ -13,7 +13,6 @@ async def root():
 @app.post("/blog")
 async def get_body(request: Request):
     data=await request.json()
-    print(data)
     if data["data"]["to"]=='917720063009@c.us' and data["data"]["body"]=="otp":
             opt=random.randint(1000,9999)
             payload = f"token=j6zub8czi2qjp57p&to=+917720063009,&body={opt}&priority=10&referenceId="
