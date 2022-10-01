@@ -6,6 +6,9 @@ from pydantic import BaseModel
 app = FastAPI()
 url = "https://api.ultramsg.com/instance14131/messages/chat"
 
+@app.get("/healthz")
+async def root():
+    return "ok"
 
 @app.post("/blog")
 async def get_body(request: Request):
